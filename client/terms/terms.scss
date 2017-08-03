@@ -1,0 +1,15 @@
+.privacy-policy p{
+  font-size: 12px;
+  width: 600px;
+  text-align: justify;
+  position: relative;
+  left: 50%;
+  margin-left: -300px;
+  top: 100px;
+  color: #FFF;
+  margin-bottom: 75px;
+  @include respond-to(phone){
+    width: 350px;
+    margin-left: -175px;
+  }
+}

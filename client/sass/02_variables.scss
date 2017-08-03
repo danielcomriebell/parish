@@ -1,0 +1,66 @@
+/*VARIABLES*/
+
+/*.......LETTER-SPACING......*/
+$letter-spacing-global: 1px;
+
+
+/*.......FONT-SIZES......*/
+
+$font-size-title: 36px;
+$font-size-subtitle: 24px;
+$font-size-nav: 22px;
+$font-size-paragraph: 12px;
+
+
+
+
+
+/*.......MARGINS......*/
+$margin-sides: 20px;
+
+
+
+
+/*.......DISTANCES......*/
+$header-padding-bottom: 20px;
+
+/* ..........................TRANSITION TIMINGS.....................*/
+$transition-extreme-slow: 1.4s;
+$transition-slow: .6s;
+$transition-medium: .4s;
+$transition-fast: .3s;
+
+
+/*.......COLORS......*/
+$white: rgba(255, 255, 255, 1);
+$white-transparent: rgba(255, 255, 255, 0.6);
+$black: rgba(0,0,0,1);
+
+
+
+/*.......LINE HEIGHTS......*/
+$line-height-overall: 20px;
+$line-height-paragraph: 20px;
+$line-height-editorsletter: 22px;
+$line-height-nav: 24px;
+
+
+
+/*.......LETTER SPACING......*/
+$letter-spacing: 1px;
+
+
+
+
+/*.......Z-INDEX......*/
+$z-loader:12;
+$z-burger: 10;
+$z-mobile-burger-bar: 10;
+$z-close-button: 11;
+$z-nav: 9;
+$z-close:8;
+$z-index-about-sound:6;
+$z-index-about:3;
+$z-header: 5;
+
+$z-main: 1;

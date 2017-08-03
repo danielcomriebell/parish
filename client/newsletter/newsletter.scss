@@ -1,0 +1,157 @@
+.newsletter{
+  p{
+    color: #FFF;
+    text-transform: uppercase;
+  }
+  .newsletter-form{
+    height: 23px;
+    margin-bottom: 15px;
+
+  }
+}
+
+.mailchimp-email{
+  width: 252px;
+}
+
+.mailchimp-email input{
+  background-color: black;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: 0;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 200px;
+  display: inline-block;
+  float: left;
+  height: 23px;
+}
+
+.mailchimp-error{
+  color: firebrick;
+  font-size: 10px;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: none !important;
+}
+
+.mailchimp-success{
+  color: #FFF;
+  font-size: 10px;
+  width: 343px;
+  position: absolute;
+  bottom: -8px;
+  text-align: justify;
+}
+
+.mailchimp-email button{
+  width: 50px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1px;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: left;
+  height: 23px;
+}
+
+
+
+@keyframes newsLeft {
+  from {@include transform-element(translateX(0px));}
+  to {@include transform-element(translateX(-260px));}
+}
+
+@-webkit-keyframes newsLeft {
+  from {@include transform-element(translateX(0px));}
+  to {@include transform-element(translateX(-260px));}
+}
+
+@-moz-keyframes newsLeft {
+  from {@include transform-element(translateX(0px));}
+  to {@include transform-element(translateX(-260px));}
+}
+
+@-ms-keyframes newsLeft {
+  from {@include transform-element(translateX(0px));}
+  to {@include transform-element(translateX(-260px));}
+}
+
+@-o-keyframes newsLeft {
+  from {@include transform-element(translateX(0px));}
+  to {@include transform-element(translateX(-260px));}
+}
+
+
+
+
+@keyframes newsRight {
+  from {@include transform-element(translateX(-260px));}
+  to {@include transform-element(translateX(0px));}
+}
+
+@-webkit-keyframes newsRight {
+  from {@include transform-element(translateX(-260px));}
+  to {@include transform-element(translateX(0px));}
+}
+
+@-moz-keyframes newsRight {
+  from {@include transform-element(translateX(-260px));}
+  to {@include transform-element(translateX(0px));}
+}
+
+@-ms-keyframes newsRight {
+  from {@include transform-element(translateX(-260px));}
+  to {@include transform-element(translateX(0px));}
+}
+
+@-o-keyframes newsRight {
+  from {@include transform-element(translateX(-260px));}
+  to {@include transform-element(translateX(0px));}
+}
+
+
+
+.newsletter-form{
+@include transform-element(translateX(-260px));
+-webkit-animation: newsLeft $transition-medium ease;
+-moz-animation: newsLeft $transition-medium ease;
+-ms-animation: newsLeft $transition-medium ease;
+-o-animation: newsLeft $transition-medium ease;
+animation: newsLeft $transition-medium ease;
+}
+
+.newsletter-form.right{
+@include transform-element(translateX(0px));
+-webkit-animation: newsRight $transition-medium ease;
+-moz-animation: newsRight $transition-medium ease;
+-ms-animation: newsRight $transition-medium ease;
+-o-animation: newsRight $transition-medium ease;
+animation: newsRight $transition-medium ease;
+}
+
+
+.newsletter-form.right-add.right-add-active{
+  -webkit-animation: newsRight $transition-medium ease;
+  -moz-animation: newsRight $transition-medium ease;
+  -ms-animation: newsRight $transition-medium ease;
+  -o-animation: newsRight $transition-medium ease;
+  animation: newsRight $transition-medium ease;
+}
+
+.newsletter-form.right-remove.right-remove-active{
+  -webkit-animation: newsLeft $transition-medium ease;
+  -moz-animation: newsLeft $transition-medium ease;
+  -ms-animation: newsLeft $transition-medium ease;
+  -o-animation: newsLeft $transition-medium ease;
+  animation: newsLeft $transition-medium ease;
+}

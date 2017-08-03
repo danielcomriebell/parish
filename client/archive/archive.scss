@@ -1,0 +1,21 @@
+.archive-menu{
+  position: absolute;
+  width: 150px;
+  height: 100vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.archive-menu a{
+  font-size: 12px;
+  @include hover-effect-color();
+}
+
+.archive-menu ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 100px;
+}

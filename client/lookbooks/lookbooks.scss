@@ -1,0 +1,236 @@
+.lookbook-wrapper{
+  height: auto;
+  width: auto;
+  .lookbook-ul{
+    height: auto;
+    width: 100vw;
+    padding-top: 100px;
+    display: table;
+
+    .lookbook-li{
+      height: auto;
+      width: 18vw;
+      display: block;
+      float: left;
+      margin-right: 7vw;
+      margin-bottom: 7vw;
+      @include image-invisible;
+      @include respond-to(phone){
+        width: 70vw;
+        position: relative;
+        left: 50%;
+        float: none;
+        margin-left: -35vw;;
+        margin-right: 0;
+        margin-bottom: 15vw;
+      }
+      &:nth-child(4n){
+        margin-right: 0vw;
+      }
+      &:nth-child(4n+5){
+        margin-left: 3.5vw;
+        @include respond-to(phone){
+          margin-left: -35vw;
+        }
+      }
+      &:nth-child(1){
+        margin-left: 3.5vw;
+        @include respond-to(phone){
+          margin-left: -35vw;
+        }
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        @include image-fade;
+      }
+    }
+  }
+}
+
+body > main > div.archive-button.ng-scope{
+  position: relative;
+  left: 20px;
+  bottom: 20px;
+}
+
+body > main > div.archive-button.ng-scope a{
+  font-size: 12px;
+  @include hover-effect-color();
+}
+
+
+
+
+//DETAIL
+.lookbook-detail-wrapper{
+  background-color: #FFF;
+  overflow:hidden;
+
+  @include respond-to(phone){
+    width: 100%;
+    height: 100vh;
+  }
+
+
+  .lookbook-detail-image{
+    // width: 70vw;
+    height: 100vh;
+    display: block;
+    margin: auto;
+    position: relative;
+
+    @include respond-to(desktop){
+      margin: auto;
+    }
+    @include respond-to(laptop-large){
+      margin: auto;
+    }
+    @include respond-to(laptop-small){
+      margin: auto;
+    }
+    @include respond-to(tablet-portrait){
+      margin: auto;
+    }
+
+    @include respond-to(phone){
+      height: auto;
+      width: 100vw;
+      left: 0;
+      margin-left: 0;
+      bottom: 0;
+      position: relative;
+    }
+    @include respond-to(tablet-landscape){
+      height: 100vh !important;
+      width: auto !important;
+      margin: auto;
+    }
+    @include respond-to(phone-landscape-device){
+      height: 100vh !important;
+      width: auto !important;
+      margin: auto !important;
+    }
+  }
+
+  .lookbook-detail-description{
+    color: #000 !important;
+    position: absolute;
+    bottom: $margin-sides;
+    left: $margin-sides;
+    font-size: $font-size-paragraph;
+    line-height: $line-height-paragraph;
+    @include respond-to(phone){
+      top: 24px;
+    }
+  }
+
+
+  .lookbook-detail-close{
+    position: absolute;
+    top: $margin-sides;
+    z-index: $z-close-button;
+    right: $margin-sides;
+    @include respond-to(desktop){
+      right: $margin-sides;
+    }
+    @include respond-to(laptop-large){
+      right: $margin-sides;
+    }
+    @include respond-to(laptop-small){
+      right: $margin-sides;
+    }
+    @include respond-to(tablet-portrait){
+      right: $margin-sides;
+    }
+    @include respond-to(tablet-landscape){
+      right: $margin-sides;
+    }
+
+    @include respond-to(phone){
+      position: fixed;
+      top: 24px;
+      right: 10px;
+      width: 60px;
+      height: 24px;
+      z-index: $z-close;
+    }
+    p{
+      color: #000 !important;
+      font-size: $font-size-paragraph;
+      @include hover-effect-color();
+      @include respond-to(phone){
+        // position: absolute;
+        // top: 10px;
+        // left:10px;
+      }
+    }
+  }
+
+
+  .lookbook-previous{
+    height: 100vh;
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    p{
+      position: absolute;
+      top:50%;
+      width: 100%;
+      margin-top: -12px;
+      height: $line-height-nav;
+      text-align: center;
+      color: #000 !important;
+      font-size: $font-size-paragraph;
+      line-height: $line-height-nav;
+      @include hover-effect-color();
+      @include respond-to(phone){
+        display: none;
+      }
+    }
+  }
+  .lookbook-next{
+    height: 100vh;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include respond-to(phone){
+      display: none;
+    }
+    @include respond-to(phone-device){
+      display: none;
+    }
+
+    p{
+      position: absolute;
+      top:50%;
+      width: 100%;
+      height: $line-height-nav;
+
+      margin-top: -12px;
+      text-align: center;
+      color: #000 !important;
+      font-size: $font-size-paragraph;
+      line-height: $line-height-nav;
+      @include hover-effect-color();
+      @include respond-to(phone){
+        margin-right: 0;
+        top: 95%;
+      }
+    }
+  }
+
+}
+
+
+.fadeScroll{
+  opacity: 1 !important;
+}
+
+// .archive-button{
+//   position: absolute;
+//   left: 20px;
+//   bottom: 20px;
+// }

@@ -1,0 +1,409 @@
+.navigation{
+  background-color: #000000;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      z-index: 9;
+      opacity: .9;
+}
+
+
+.navigation-table{
+  height: 100%;
+  width: 100%;
+  .navigation-tr{
+    .navigation-td{
+      .nav-wrapper{
+        display: block;
+        position: relative;
+        left: 50%;
+        width: 973px;
+        margin-left: -486.5px;
+        @include respond-to(phone){
+          width: 35vh;
+          margin-left: -17.5vh;
+        }
+        @include respond-to(tablet-landscape){
+          width: 35vh;
+          margin-left: -17.5vh;
+        }
+        .nav-circle{
+          border-radius: 50%;
+          border: 2px solid #FFFFFF;
+          height: 220px;
+          width: 220px;
+          display: inline-block;
+          position: relative;
+          margin-right: 20px;
+          @include respond-to(phone){
+            border-radius: 0%;
+            height: 13vh;
+            width: 35vh;
+            margin-bottom: 30px;
+          }
+          @include respond-to(tablet-landscape){
+            border-radius: 0%;
+            height: 13vh;
+            width: 35vh;
+            margin-bottom: 30px;
+          }
+          &:nth-child(4){
+            margin-right: 0;
+          }
+          .nav-a{
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            .nav-p{
+              position: absolute;
+              top: 50%;
+              margin-top: -10px;
+              height: 18px;
+              font-size: 12px;
+              width: 100%;
+              color: #FFFFFF;
+              text-align: center;
+              line-height: $line-height-nav;
+              @include respond-to(phone){
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.burger-wrapper{
+  position: fixed;
+  top: $margin-sides;
+  right: $margin-sides;
+  z-index: $z-burger;
+  // border-radius: 50%;
+  // background-color: rgba(255, 255, 255, 1);
+  // border: 1px solid #FFFFFF;
+  width: 30px;
+  height: 30px;
+  .burger-icon{
+    width: 100%;
+    height: 100%;
+    // p{
+    //   @include hover-effect-color();
+    //   color: #FFFFFF;
+    //   font-size: $font-size-paragraph;
+    // }
+    svg{
+      width: 100%;
+      height: 100%;
+
+    }
+  }
+}
+
+
+
+.newsletter{
+  position: absolute;
+  left: $margin-sides;
+  bottom: $margin-sides;
+  p{
+    color: #FFF;
+    font-size: $font-size-paragraph;
+    @include hover-effect-color();
+    cursor: pointer;
+  }
+
+  @include respond-to(phone){
+    display: none;
+  }
+}
+
+.copy{
+  position: absolute;
+  right: $margin-sides;
+  bottom: $margin-sides;
+  p{
+    color: #FFF;
+    font-size: $font-size-paragraph;
+    @include hover-effect-color();
+    cursor: pointer;
+  }
+}
+
+.shop-link{
+  position: absolute;
+  left: $margin-sides;
+  top: $margin-sides;
+  a{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @include hover-effect-color();
+  }
+}
+
+
+
+
+
+
+
+@keyframes shiftDownPop {
+  from {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+   }
+  to {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes shiftDownPop {
+  from {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+   }
+  to {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-moz-keyframes shiftDownPop {
+  from {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+   }
+  to {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-ms-keyframes shiftDownPop {
+  from {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+   }
+  to {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+}
+
+@-o-keyframes shiftDownPop {
+  from {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+   }
+  to {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+}
+
+
+
+//shift up keyframe
+@keyframes shiftUpPop {
+  from {
+     transform: translateY(100%);
+     -webkit-transform: translateY(100%);
+   }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes shiftUpPop {
+  from {
+     transform: translateY(100%);
+     -webkit-transform: translateY(100%);
+   }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@-moz-keyframes shiftUpPop {
+  from {
+     transform: translateY(100%);
+     -webkit-transform: translateY(100%);
+   }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@-ms-keyframes shiftUpPop {
+  from {
+     transform: translateY(100%);
+     -webkit-transform: translateY(100%);
+   }
+  to {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@-o-keyframes shiftUpPop {
+  from {
+     transform: translateY(100%);
+     -webkit-transform: translateY(100%);
+   }
+  to {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+  }
+}
+
+$animation-speed: 0.6s;
+
+.navigation{
+  border-top: 1px solid #FFFFFF;
+  display: block !important;
+  transform: translateY(0%);
+-webkit-transform: translateY(0%);
+
+-webkit-animation: shiftUpPop $animation-speed ease;
+-moz-animation: shiftUpPop $animation-speed ease;
+-ms-animation: shiftUpPop $animation-speed ease;
+-o-animation: shiftUpPop $animation-speed ease;
+animation: shiftUpPop $animation-speed ease;
+}
+
+.navigation.ng-hide{
+    display: block !important;
+transform: translateY(100%);
+-webkit-transform: translateY(100%);
+
+-webkit-animation: shiftDownPop $animation-speed ease;
+-moz-animation: shiftDownPop $animation-speed ease;
+-ms-animation: shiftDownPop $animation-speed ease;
+-o-animation: shiftDownPop $animation-speed ease;
+animation: shiftDownPop $animation-speed ease;
+}
+
+
+
+
+.navigation.ng-hide-remove.ng-hide-remove-active{
+    display: block !important;
+  -webkit-animation: shiftUpPop $animation-speed ease;
+  -moz-animation: shiftUpPop $animation-speed ease;
+  -ms-animation: shiftUpPop $animation-speed ease;
+  -o-animation: shiftUpPop $animation-speed ease;
+  animation: shiftUpPop $animation-speed ease;
+}
+
+.navigation.ng-hide-add.ng-hide-add-active{
+    display: block !important;
+  -webkit-animation: shiftDownPop $animation-speed ease;
+  -moz-animation: shiftDownPop $animation-speed ease;
+  -ms-animation: shiftDownPop $animation-speed ease;
+  -o-animation: shiftDownPop $animation-speed ease;
+  animation: shiftDownPop $animation-speed ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//rotating the burger when the nav opens
+
+
+//animating the bar
+@keyframes rotate_clock {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(45deg);}
+}
+
+@-webkit-keyframes rotate_clock {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(45deg);}
+}
+
+@-moz-keyframes rotate_clock {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(45deg);}
+}
+
+@-ms-keyframes rotate_clock {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(45deg);}
+}
+
+@-o-keyframes rotate_clock {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(45deg);}
+}
+
+
+
+
+@keyframes rotate_counter {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(90deg);}
+}
+
+@-webkit-keyframes rotate_counter {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(90deg);}
+}
+
+@-moz-keyframes rotate_counter {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(90deg);}
+}
+
+@-ms-keyframes rotate_counter {
+  from {transform: rotate(45deg);}
+  to {transform: rotate(90deg);}
+}
+
+@-o-keyframes rotate_counter {
+  from {transform: rotate(45deg);}
+  to {transform: translateY(90deg);}
+}
+//plus animation
+.line{
+  transform: rotate(0deg);
+  transform-origin: 50%;
+}
+
+//plus animation
+.line.rotateClock{
+  transform: rotate(45deg);
+  transform-origin: 50%;
+}
+.line.rotateClock-add.rotateClock-add-active{
+  -webkit-animation: rotate_clock .6s ease;
+  -moz-animation: rotate_clock .6s ease;
+  -ms-animation: rotate_clock .6s ease;
+  -o-animation: rotate_clock .6s ease;
+  animation: rotate_clock .6s ease;
+}
+
+.line.rotateClock-remove.rotateClock-remove-active{
+  -webkit-animation: rotate_counter .6s ease;
+  -moz-animation: rotate_counter .6s ease;
+  -ms-animation: rotate_counter .6s ease;
+  -o-animation: rotate_counter .6s ease;
+  animation: rotate_counter .6s ease;
+}

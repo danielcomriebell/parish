@@ -1,0 +1,19 @@
+<div ng-controller="aboutCtrl">
+
+  <div class = "title-text">
+    <p> ABOUT </p>
+  </div>
+
+
+    <video class="about-video" id="about-video" src="images/2.mp4" autoplay loop poster="images/2.mp4" ng-click="playPause()">
+
+    </video>
+
+    <div class="about-sound" ng-click="volume()">
+      <p>
+        {{soundAction}}
+      </p>
+
+    </div>
+
+</div>

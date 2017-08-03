@@ -1,0 +1,57 @@
+<div class = "contact" ng-controller="contactCtrl">
+
+<table class = 'contact-inside'>
+  <tr>
+    <td>
+
+      <div class = "contact-coloumn" ng-controller="contactCtrl" >
+        <div class = "form-for-contact">
+
+          <div class="alert-error" ng-show="error">
+            <p> An error occured. Please try again.</p>
+          </div>
+
+          <div class = "alert-success" ng-show = "success">
+            <p> Your message has successfully been sent! </p>
+          </div>
+
+          <form ng-submit="contactForm.$valid && submitForm()" name = "contactForm" ng-hide = "success" novalidate>
+            <div class = "name">
+                <input class = "name-input" type="text" placeholder="NAME" ng-model = "formData.name" required>
+            </div>
+
+            <div class = "email">
+                <input class = "email-input" type="email" placeholder="EMAIL" ng-model = "formData.email" required>
+            </div>
+
+            <div class = "reason-for-contact">
+                <select class = "reason-dropdown"  placeholder="NAME" ng-model = "formData.subject" required>
+                  <option value="" disabled select>SUBJECT</option>
+                  <option value="GENERAL">GENERAL</option>
+                  <option value="PRESS">PRESS</option>
+                  <option value="JOBS">JOBS</option>
+                </select>
+            </div>
+
+          <div class = "message">
+                <textarea class = "email-input" type="message" placeholder="MESSAGE" ng-model = "formData.body" required></textarea>
+          </div>
+        </div>
+
+        <div class = "submit-button" ng-hide = "success" ng-click: "submitForm()">
+          <button type = "submit"  ng-class="{'contactDisabled': contactForm.$invalid}" value = "Submit" class = "submit-button" ng-click="submitForm()" ng-disabled="contactForm.$invalid">SEND</button>
+        </div>
+
+        <div class ="footer-text" ng-hide = "success">
+          <p>25 west 36th street, 4th floor New york, ny 10018 | 646-455-1629 | help@parishnationshop.com</p>
+          <p>{{ resultMessage }}</p>
+        </div>
+
+      </form>
+
+  </td>
+</tr>
+
+</div>
+
+</div>

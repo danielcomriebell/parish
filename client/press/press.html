@@ -1,0 +1,74 @@
+<div class = "title-text">
+  <p> press </p>
+</div>
+
+
+<div class="press-wrapper" summary="this is the content of social" ng-controller="pressCtrl">
+
+    <div  class="press-content">
+
+      <!-- <div twitter-timeline="606215402507661313" auto-resize="true" css-url="/app.css" data-tweet-limit="100"></div> -->
+      <!-- <div class='twitter-wrapper'> -->
+        <!-- <a class="twitter-timeline" href="https://twitter.com/AngelSanchezPR" data-widget-id="609079019741523968"></a> -->
+      <!-- </div> -->
+  <!-- infinite-scroll='loadMore()' infinite-scroll-distance="1" -->
+
+  <!-- on-finish-render="ngRepeatFinished" -->
+
+
+
+
+      <div class="insta-wrapper">
+        <ul class="insta-grid" instaimageclick-Directive >
+          <li ng-repeat="p in instaTotal | filter: query| limitTo:totalDisplayed track by $index " class="insta-li" id="insta-{{$index}}" ng-show="([p] | filter: query).length > 0">
+
+            <!-- <div ng-show="journalLoading" class="images-loader-div">
+              <div class="grey-placeholder"  alt="Loading icon"></div>
+            </div> -->
+
+
+
+            <div class="press-images-loader-div" ng-show="journalLoading">
+                <div class="press-loader" alt="Loading icon"></div>
+            </div>
+
+
+  <!-- href="journal/{{isItem(p)}}" -->
+            <a ng-click="pressMobileOutsideViewOnInstagram($index); bePress();" >
+              <img press-style-parent class="insta-image" src="{{p.images.standard_resolution.url}}" ng-init="showText=false" ng-mouseover="showText=true" ng-mouseout="showText=false">
+
+              <div class="insta-viewOnInstagram" ng-mouseover="showText=true">
+                <a href="{{p.link}}" target="_blank" ng-show="showText" >
+                  <p>view on instagram</p>
+                </a>
+
+              </div>
+            </a>
+
+
+            <div class="insta-text" ng-show="showText" >
+              <p>
+                {{p.caption.text}}
+              </p>
+            </div>
+
+
+            <!-- <a ng-if="isMobileDevice" href="journal/{{isItem(p)}}" ng-click="beJournal(); mobileLocation('journal/{{isItem(p)}}')">
+              <img journal-style-parent class="instagram-image" src="{{p.images.standard_resolution.url}}" >
+            </a> -->
+          </li>
+
+          <li class="load-more-li" ng-hide="hideLoadMore"><button class="load-more-button" ng-click="loadMore()" ng-hide="noMore">Load more</button></li>
+
+
+        </ul>
+
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>

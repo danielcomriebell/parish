@@ -1,0 +1,43 @@
+
+
+<nav class="navigation" ng-controller="navCtrl" ng-hide="!navActive">
+
+  <table class="navigation-table">
+    <tr class="navigation-tr">
+      <td class="navigation-td" style="height:100%; vertical-align: middle;">
+        <div class="nav-wrapper">
+            <div class="nav-circle" ng-click="beNavActive(); mobileLocation('/lookbooks/fw-17')" ng-cloak >
+              <a class="nav-a" href="/lookbooks/fw-17"><p class="nav-p">lookbooks</p></a>
+            </div>
+            <!-- <div class="nav-circle" ng-click="beNavActive(); mobileLocation('/lookbooks/ss-16')" ng-cloak ><a class="nav-a" href="/lookbooks/ss-16"><p class="nav-p">lookbooks</p></a></div> -->
+
+            <div class="nav-circle" ng-click="beNavActive(); mobileLocation('/press')" ng-cloak ><a class="nav-a" href="/press"><p class="nav-p">press</p></a></div>
+            <div class="nav-circle" ng-click="beNavActive(); mobileLocation('/about')" ng-cloak ><a class="nav-a" href="/about"><p class="nav-p">about</p></a></div>
+            <div class="nav-circle" ng-click="beNavActive(); mobileLocation("http://www.parishnationshop.com/men.html")" ng-cloak ><a class="nav-a" href="http://www.parishnationshop.com/men.html"><p class="nav-p">shop</p></a></div>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <div class = "newsletter" ng-controller="newsletterCtrl">
+    <div class="newsletter-form" ng-class="{'right': showNewsletter}">
+        <newsletter-directive></newsletter-directive>
+    </div>
+    <p ng-click="showNewsFunction()" ng-hide="mailchimp.result === 'success'"> Newsletter </p>
+
+
+
+  </div>
+
+  <div class = "copy">
+    <div class="nav-circle" ng-click="beNavActive()" ng-cloak ><a class="nav-a" href="/terms"><p class="nav-p">&copy Parish Nation 2016</p></a></div>
+  </div>
+
+  <div class = "shop-link" ng-click="beNavActive(); mobileLocation('/contact')" ng-cloak>
+    <a href="/contact">CONTACT</a>
+  </div>
+
+  <!-- <div class="nav-circle" ng-click="beNavActive(); mobileLocation('/contact')" ng-cloak ><a class="nav-a" href="/contact"><p class="nav-p">contact</p></a></div> -->
+
+
+</nav>

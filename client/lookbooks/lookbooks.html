@@ -1,0 +1,22 @@
+<div ng-controller="lookbooksCtrl">
+
+
+  <div class="lookbook-wrapper">
+    <ul class="lookbook-ul">
+      <li class="lookbook-li" id="lookbook-li-{{$index}}" ng-repeat="l in lookbookData.data" image-fade-directive>
+        <a href="/lookbooks/{{lookbookData.collection}}/{{l.look}}">
+          <!-- ng-click="goToDetail({{l.look}})" -->
+          <img src="{{l.src}}" alt="lookbook-image-{{$index}}" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class = "title-text">
+  <p> {{lookbookData.collectionName}} </p>
+</div>
+
+<div class = "archive-button">
+  <a href = "/archive">ARCHIVE</a>
+</div>

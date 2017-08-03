@@ -1,0 +1,28 @@
+.about-video{
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+}
+.title-text{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  p{
+    color: #FFF;
+    font-size: $font-size-paragraph;
+  }
+}
+
+
+.about-sound{
+  position: fixed;
+  left: $margin-sides;
+  bottom: $margin-sides;
+  z-index: $z-index-about-sound;
+  p{
+    @include hover-effect-color();
+    color: #FFFFFF;
+    font-size: $font-size-paragraph;
+  }
+}

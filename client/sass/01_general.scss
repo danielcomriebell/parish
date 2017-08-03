@@ -1,0 +1,361 @@
+
+/*....................................General settings..................................*/
+
+
+
+
+/*.....................TEXT MARK STYLES......................*/
+
+::-moz-selection {
+/*    background: $color-light-grey;*/
+    text-shadow: none;
+}
+
+
+::selection {
+    background-color:none;
+    text-shadow: none;
+    color: none;
+
+}
+
+
+/*.........................................................*/
+
+
+/*.....................ACTIVE CLASSES......................*/
+
+.active{
+/*  color: $page-color !important;*/
+  pointer-events: none;
+}
+
+/*.............................NG-CLOAK............................*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+cursor: pointer;
+}
+
+
+/*....................HIDING SCROLLBAR.....................*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*.....................GENERAL STYLES......................*/
+
+html{
+ font-family: helvetica;
+ width: 100vw;
+ height: auto;
+ margin: 0 0;
+ padding: 0 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: helvetica;
+    background-color: #000000;
+}
+
+body {
+  background-color: #000000;
+  position: relative;
+   width: 100vw;
+   height: auto;
+   min-height: 100%;
+    margin: 0 0;
+    padding: 0 0;
+    text-transform: uppercase;
+    line-height: $line-height-overall;
+    font-family: helvetica;
+    letter-spacing: $letter-spacing-global;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    @include respond-to(phone){
+      // overflow-x: hidden;
+    }
+}
+
+
+main {
+  width: 100vw;
+  height: auto;
+  display: block;
+
+  // width:  100%;
+  // height: auto;
+  // position: relative;
+  // display: block;
+  // list-style-type: none;
+  // z-index: 101;
+  // z-index: 103;
+}
+
+p, a, li {
+  font-size: $font-size-subtitle;
+  list-style-type: none;
+/*  font-weight: $font-weight-light;*/
+  letter-spacing: $letter-spacing;
+  color: $white;
+  outline: 0;
+  line-height: $line-height-paragraph;
+}
+
+
+input, textarea, select, a, li {
+  text-decoration: none;
+  line-height: $line-height-paragraph;
+}
+
+
+
+
+span{
+  text-transform: uppercase;
+}
+
+
+
+.landscape-view-wrapper{
+  position: fixed;
+  background-color: #FFFFFF;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  .landscape-view-div{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -13px;
+    margin-left: -250px;
+    width: 500px;
+    height: 26px;
+
+    .landscape-view-p{
+      height: 26px;
+      line-height: 26px;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+}
+
+.logo-landscape{
+    position:absolute;
+    left: 50%;
+    top: 60%;
+    height: 50px;
+    width: 50px;
+    margin-top: 0px;
+    margin-left: -27.5px;
+  }
+
+
+
+
+
+
+.page-loader-div{
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  background-color: #000000;
+  top: $margin-sides;
+  left: $margin-sides;
+  z-index: $z-loader;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @keyframes rotateFall {
+      0%      { transform: rotateZ(0deg); }
+      20%     { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+      40%     { transform: rotateZ(17deg); }
+      60%     { transform: rotateZ(16deg); }
+      100%    { transform: translateY(100%) rotateZ(17deg); }
+  }
+
+  /* slide in from the bottom */
+  @keyframes slideOutLeft {
+      to      { transform: translateX(-100%); }
+  }
+
+  /* rotate out newspaper */
+  @keyframes rotateOutNewspaper {
+      to      { transform: translateZ(-3000px) rotateZ(360deg); opacity: 0; }
+  }
+
+  /* entering animations --------------------------------------- */
+  /* scale up */
+  @keyframes scaleUp {
+      from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+  }
+
+  /* slide in from the right */
+  @keyframes slideInRight {
+      from    { transform:translateX(100%); }
+      to      { transform: translateX(0); }
+  }
+
+  /* slide in from the bottom */
+  @keyframes slideInUp {
+      from    { transform:translateY(100%); }
+      to      { transform: translateY(0); }
+  }
+
+
+
+
+
+
+  /*...................................ANIMATIONS....................................*/
+
+
+  @keyframes pageleave {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+
+  @-webkit-keyframes pageleave {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+
+  @-moz-keyframes pageleave {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+
+  @-ms-keyframes pageleave {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+
+  @-o-keyframes pageleave {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+
+
+  @keyframes pageenter {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+  @-webkit-keyframes pageenter {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+  @-moz-keyframes pageenter {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+  @-ms-keyframes pageenter {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+  @-o-keyframes pageenter {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+
+
+
+
+
+  /*.................................NG ENTER/LEAVE..................................*/
+
+  $fade-in: 1s;
+
+  .page{
+    opacity: 1;
+  }
+
+  .page.ng-enter.ng-enter-active {
+
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+
+  }
+
+  .page.ng-leave {
+    opacity: 0;
+    -webkit-transition: opacity 500ms ease;
+    -moz-transition: opacity 500ms ease;
+    -ms-transition: opacity 500ms ease;
+    -o-transition: opacity 500ms ease;
+    transition: opacity 500ms ease;
+  }
+
+
+  .page-lookbook{
+    opacity: 1;
+  }
+
+  .page-lookbook.ng-enter, .page-lookbook.ng-enter.ng-enter-active {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+
+  }
+
+  .page-lookbook.ng-leave, .page-lookbook.ng-leave-active {
+    opacity: 1;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+
+/*.............................NG-CLOAK............................*/
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+cursor: pointer;
+}

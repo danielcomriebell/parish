@@ -1,0 +1,257 @@
+.contact{
+width: 100%;
+height: 100vh;
+}
+
+.title-text{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  p{
+    color: #FFF;
+    font-size: $font-size-paragraph;
+  }
+}
+
+
+.contact-inside{
+  position: absolute;
+  left: 50%;
+  width: 300px;
+  height:370px;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -185px;
+  td{
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.name input, .email input {
+  width: 302px;
+  margin-bottom: 20px;
+  height: 30px;
+  background-color: transparent;
+  border:none;
+  color: white;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.reason-for-contact select{
+  width: 100%;
+  -webkit-appearance: none;
+  color: white;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+
+.message textarea{
+  width: 300px;
+  resize: none;
+  margin-bottom: 20px;
+  height: 150px;
+  background-color: transparent;
+  border:none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+}
+
+.submit-button button{
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  height: 30px;
+  letter-spacing: 1px;
+  outline: 0;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition:  all .3s ease-in-out;
+  -o-transition:  all .3s ease-in-out;
+  &:hover{
+    background-color: white;
+    color: black;
+  }
+  &.contactDisabled{
+    cursor: default;
+    &:hover{
+      background-color: black;
+      color: #FFFFFF;
+
+    }
+}
+  @include respond-to(phone){
+    height: 40px;
+  }
+}
+
+.footer-text{
+  position: absolute;
+  margin-top: 50px;
+  width: 671px;
+  margin-left: -335.5px;
+  left: 50%;
+  @include respond-to(phone){
+    width: 300px;
+    margin-left: -150px;
+    margin-bottom: 100px;
+  }
+  p{
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: white;
+  }
+}
+
+.alert-success{
+    width: 340px;
+    position: absolute;
+    left: 50%;
+    margin-left: -170px;
+    top: 50%;
+    margin-top: -10px;
+    p{
+      color: white;
+      font-size: 12px;
+    }
+}
+
+.alert-error{
+    width: 288px;
+    position: absolute;
+    left: 50%;
+    margin-left: -144px;
+    margin-top: 380px;
+    p{
+      color: firebrick;
+      font-size: 12px;
+    }
+}
+
+*::-webkit-input-placeholder {
+    color: #FFF;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #FFF;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #FFF;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #FFF;
+}
+
+
+
+// .ng-invalid.ng-dirty{
+//   color: firebrick;
+// }
+
+// .ng-valid.ng-dirty{
+//   color: green;
+// }
+
+
+
+
+
+
+
+
+
+
+
+// @keyframes contactLeft {
+//   from {@include transform-element(translateX(0px));}
+//   to {@include transform-element(translateX(-200px));}
+// }
+//
+// @-webkit-keyframes contactLeft {
+//   from {@include transform-element(translateX(0px));}
+//   to {@include transform-element(translateX(-200px));}
+// }
+//
+// @-moz-keyframes contactLeft {
+//   from {@include transform-element(translateX(0px));}
+//   to {@include transform-element(translateX(-200px));}
+// }
+//
+// @-ms-keyframes contactLeft {
+//   from {@include transform-element(translateX(0px));}
+//   to {@include transform-element(translateX(-200px));}
+// }
+//
+// @-o-keyframes contactLeft {
+//   from {@include transform-element(translateX(0px));}
+//   to {@include transform-element(translateX(-200px));}
+// }
+//
+//
+//
+//
+// @keyframes contactRight {
+//   from {@include transform-element(translateX(-200px));}
+//   to {@include transform-element(translateX(0px));}
+// }
+//
+// @-webkit-keyframes contactRight {
+//   from {@include transform-element(translateX(-200px));}
+//   to {@include transform-element(translateX(0px));}
+// }
+//
+// @-moz-keyframes contactRight {
+//   from {@include transform-element(translateX(-200px));}
+//   to {@include transform-element(translateX(0px));}
+// }
+//
+// @-ms-keyframes contactRight {
+//   from {@include transform-element(translateX(-200px));}
+//   to {@include transform-element(translateX(0px));}
+// }
+//
+// @-o-keyframes contactRight {
+//   from {@include transform-element(translateX(-200px));}
+//   to {@include transform-element(translateX(0px));}
+// }
+//
+//
+//
+// .contact{
+// @include transform-element(translateX(-200px));
+// }
+
+// .nav-home.right{
+// @include transform-element(translateX(0px));
+// }
+
+
+.nav-home.right-add.right-add-active{
+  -webkit-animation: homeRight 1s ease;
+  -moz-animation: homeRight 1s ease;
+  -ms-animation: homeRight 1s ease;
+  -o-animation: homeRight 1s ease;
+  animation: homeRight 1s ease;
+}
+
+.nav-home.right-remove.right-remove-active{
+  -webkit-animation: homeLeft 1s ease;
+  -moz-animation: homeLeft 1s ease;
+  -ms-animation: homeLeft 1s ease;
+  -o-animation: homeLeft 1s ease;
+  animation: homeLeft 1s ease;
+}

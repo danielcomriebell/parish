@@ -1,0 +1,25 @@
+<div ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()" class="lookbook-detail-wrapper" ng-controller="lookbooksCtrl">
+
+
+<div class="lookbook-previous" ng-click="goPrevious()"> <a ng-swipe-left="swipeRight()" ><p>previous</p></a></div>
+
+
+
+  <div class="lookbook-detail-close">
+    <a href="/lookbooks/{{lookbookData.collection}}">
+      <p>
+        CLOSE
+      </p>
+    </a>
+  </div>
+
+  <img class="lookbook-detail-image" src="{{lookbookData.data[realId].src}}" alt="" />
+
+
+  <p class="lookbook-detail-description">LOOK {{lookbookData.data[id].look}}</p>
+
+
+
+<div class="lookbook-next" ng-click="goNext()"><a ng-swipe-right="swipeLeft()" ><p>next</p></a></div>
+
+</div>
