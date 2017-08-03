@@ -25,6 +25,7 @@ let app = express();
 
 
 // app.engine('html', ejs.renderFile);
+app.set('port', (process.env.PORT || 8081));
 app.set('view engine', 'html');
 app.use(express.static(__dirname + "/../client") );
 app.use(bodyParser.json()); // support json encoded bodies
@@ -32,5 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 
 
+app.listen(app.get('port'), function(){
+  console.log('Node app is running on port', app.get('port'));
+})
 // app.get('*', routes.index);
-app.listen(8081, () => console.log("listening on 8081"));
+// app.listen(8081, () => console.log("listening on 8081"));
